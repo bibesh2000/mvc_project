@@ -1,38 +1,36 @@
 package com.example.mvc_project.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 
+
 @Entity
-@Table(name="USerDetails")
+@Table(name="user_details")
 public class User {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
 
-        @Column(name = "Name")
+        @Column(name = "name")
         private String name;
 
-        @Column(name = "Phone_Number")
+        @Column(name = "phone_number")
         private Integer phoneNumber;
 
-        @Column(name = "Age")
+        @Column(name = "age")
         private Integer age;
 
-        @Column(name = "Address")
+        @Column(name = "address")
         private String address;
 
-        @Column(name = "Email_Address")
+        @Column(name = "email_address")
         private String emailAddress;
 
-        @Column(name = "Status")
+        @Column(name = "status")
         private Boolean status;
 }
